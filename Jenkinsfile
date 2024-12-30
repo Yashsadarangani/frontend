@@ -22,6 +22,10 @@ pipeline {
                 echo 'Building the project...'
                 bat '''
                 npm install
+                npm init -y
+                git add package.json
+                git commit -m "Add package.json"
+                git push origin main
                 '''
             }
         }
